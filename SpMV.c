@@ -177,7 +177,7 @@ int *solutionSpMV(int *values, int *colIndex, int *rowIndex, int *x, int m) {
     int *solution = (int  *)malloc(m * sizeof(int));        // Allocation of memory for solution array
 
     // Initialize solution array with all values being zero
-    initializeArray(solution, nnz);
+    initializeArray(solution, m);
 
     // Computes SpMV using the compressed information about A (values, colIndex, and rowIndex arrays)
     for(int i = 0; i < nnz; i++) {
